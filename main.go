@@ -2,11 +2,54 @@ package main
 
 import (
 	"fmt"
+	// "time"
 )
 
 func main(){
-    
+    i, j := 42, 2000
+    p := &i
+    q := &j
+    fmt.Println(p)
+    fmt.Println(q)
+    fmt.Println(*p) 
+    fmt.Println(*q) 
+    p= &j
+    fmt.Println(*p)
 }
+
+
+
+// func main(){
+//     fmt.Println("starting to count")
+//     for i := 0; i < 10; i++{
+//         defer fmt.Print(i)
+//     }
+//     fmt.Println("counting done")
+// }
+
+
+// func main(){
+//     i:= 3;
+//     switch i{
+//     case 1: 
+//         fmt.Println("number is 1")
+//     case 2: 
+//         fmt.Println("number is 2")
+//     case 4: 
+//         fmt.Println("number is 4")
+//     case 5: 
+//         fmt.Println("number is 5")
+//     default:
+//         fmt.Println("Unknown number ")
+//     };
+//     t := time.Now()
+//     switch {
+//     case t.Hour() < 16:
+//         fmt.Println("It's before noon")
+//     default:
+//         fmt.Println("It's after noon")
+//     }
+// }
 
 
 // func main(){
@@ -66,12 +109,6 @@ func main(){
 // func main(){
 // 	fmt.Println(split(17))
 // }
-
-
-
-
-
-
 
 
 
