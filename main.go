@@ -6,16 +6,47 @@ import (
 )
 
 func main(){
-    i, j := 42, 2000
-    p := &i
-    q := &j
-    fmt.Println(p)
-    fmt.Println(q)
-    fmt.Println(*p) 
-    fmt.Println(*q) 
-    p= &j
-    fmt.Println(*p)
+    var a[5] int
+    fmt.Println("empty:", a)
+    a[0]=1
+    fmt.Println("first thing changed", a)
+    fmt.Println("set:", a)
+    fmt.Println("You have to do implicit type conversions in order to assign values to an array")
+    fmt.Println("\nLength function like this: len(a): ",len(a))
+    fmt.Println()
+    b := [...]int {1, 2, 3, 4, 5}
+    fmt.Println("declaration:", b)
+
+    //You can also have the compiler count the number of elements for you with ...
+    b = [...]int{1, 2, 6, 4, 5}
+
+    fmt.Println("dcl:", b)
+    fmt.Println()
+    var twoD = [2][3]int{
+        {1, 2, 3},
+        {1, 2, 3},
+    }// multi dimensional array
+    fmt.Println(twoD)
 }
+
+
+
+
+
+// func main(){
+//     i, j := 42, 2000
+//     p := &i
+//     q := &j// the type of q is Pointers, and similar for p
+//     fmt.Println(p)// will print the address it is pointing to
+//     fmt.Println(q)
+//     fmt.Println(*p) 
+//     fmt.Println(*q) 
+//     p= &j
+//     fmt.Println(i)
+//     fmt.Println(j)
+//     // * -> used to return the value
+//     // & -> returns you the address 
+// }
 
 
 
@@ -27,6 +58,8 @@ func main(){
 //     fmt.Println("counting done")
 // }
 
+
+// switch
 
 // func main(){
 //     i:= 3;
@@ -52,6 +85,8 @@ func main(){
 // }
 
 
+// if, if-else
+
 // func main(){
 //     var count int = 0
 //     if "a"=="a"{
@@ -66,6 +101,8 @@ func main(){
 //     fmt.Println(count)
 // }
 
+
+// for loop
 // func main(){
     
 //     i:= 0
@@ -89,6 +126,9 @@ func main(){
 
 
 
+
+// Variable declaration with data types
+
 // var c, py, ja, some bool
 // // k := 9// error
 // func main(){
@@ -99,6 +139,9 @@ func main(){
 // }
 
 
+
+
+//
 
 // func split(sum int)(x, y int){
 // 	x = sum * 4/9;
