@@ -4,30 +4,46 @@ import (
 	"fmt"
 	// "time"
 )
+type Vertex struct{
+    X,Y int
+}
+var (
+    v1 = Vertex{2,3}// v1 has the type Vertex
+    v2 = Vertex{3,4}
+    p = &Vertex{2,3}// p has the type *Vertex
+)
 
 func main(){
-    var a[5] int
-    fmt.Println("empty:", a)
-    a[0]=1
-    fmt.Println("first thing changed", a)
-    fmt.Println("set:", a)
-    fmt.Println("You have to do implicit type conversions in order to assign values to an array")
-    fmt.Println("\nLength function like this: len(a): ",len(a))
-    fmt.Println()
-    b := [...]int {1, 2, 3, 4, 5}
-    fmt.Println("declaration:", b)
-
-    //You can also have the compiler count the number of elements for you with ...
-    b = [...]int{1, 2, 6, 4, 5}
-
-    fmt.Println("dcl:", b)
-    fmt.Println()
-    var twoD = [2][3]int{
-        {1, 2, 3},
-        {1, 2, 3},
-    }// multi dimensional array
-    fmt.Println(twoD)
+    
+    fmt.Println(v1,"\n", p)
+    fmt.Println(v2)
 }
+
+
+
+// func main(){
+//     var a[5] int
+//     fmt.Println("empty:", a)
+//     a[0]=1
+//     fmt.Println("first thing changed", a)
+//     fmt.Println("set:", a)
+//     fmt.Println("You have to do implicit type conversions in order to assign values to an array")
+//     fmt.Println("\nLength function like this: len(a): ",len(a))
+//     fmt.Println()
+//     b := [...]int {1, 2, 3, 4, 5}
+//     fmt.Println("declaration:", b)
+
+//     //You can also have the compiler count the number of elements for you with ...
+//     b = [...]int{1, 2, 6, 4, 5}
+
+//     fmt.Println("dcl:", b)
+//     fmt.Println()
+//     var twoD = [2][3]int{
+//         {1, 2, 3},
+//         {1, 2, 3},
+//     }// multi dimensional array
+//     fmt.Println(twoD)
+// }
 
 
 
