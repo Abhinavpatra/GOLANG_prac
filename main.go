@@ -4,20 +4,69 @@ import (
 	"fmt"
 	// "time"
 )
-type Vertex struct{
-    X,Y int
-}
-var (
-    v1 = Vertex{2,3}// v1 has the type Vertex
-    v2 = Vertex{3,4}
-    p = &Vertex{2,3}// p has the type *Vertex
-)
+
+
 
 func main(){
+    num := []int{0,2,3,4,4,5,32,6,31,61,64,33,41,24,23}
+    fmt.Println("The original slice is: ", num)
+    // printSLices(num);
+    num = num[:0]//will create a slice of length 0, but the capacity will stay the same 
+    fmt.Printf("after slicing, the slice [:0] the length is: %d and the capacity is: %d:", len(num), cap((num)))
+    fmt.Println(num)
+    fmt.Println()
+
+
+    num = num[:15];
+    fmt.Printf("after slicing, the slice[:15] the length is: %d and the capacity is: %d:", len(num), cap((num)))
+    fmt.Println(num)
+
     
-    fmt.Println(v1,"\n", p)
-    fmt.Println(v2)
+    num = num[3:7]
+    fmt.Println("sliced it as [3:4], now the slice is",num)
 }
+
+
+func printSLices(nums [] int){
+    fmt.Println("Printing the slice of length:", len(nums))
+    fmt.Printf("Slice of length %d is: %d, \n the capacity of the same slice is,cap: %d", len(nums), nums, cap(nums))
+}
+
+
+// func main(){
+//     var ages[4] int = [4]int{1,2,3,4}
+//     fmt.Println("The ages are: ", ages)
+//     fmt.Println("The number of ages are:", len(ages))
+//     fmt.Println()
+//     fmt.Println()
+//     fmt.Println()
+
+//     var scores = []float32{1.2,3,4,56,7.8,9}
+//     scores = append(scores, 10.5)
+//     fmt.Println("Scores:",scores)
+//     names := []string{"Abhinav", "adam", "john", "quench"}
+//     rangeThree := names[2:]
+
+
+//     rangeOne := names[:4]// prints elements from the start til index 4(exclusive)
+//     var rangeTwo = names[0:3]// prints elements from index 1 to 3(exclusive)
+//     fmt.Println(rangeOne, rangeTwo, rangeThree)
+// }
+
+// type Vertex struct{
+//     X,Y int
+// }
+// var (
+//     v1 = Vertex{2,3}// v1 has the type Vertex
+//     v2 = Vertex{3,4}
+//     p = &Vertex{2,3}// p has the type *Vertex
+// )
+
+// func main(){
+    
+//     fmt.Println(v1,"\n", p)
+//     fmt.Println(v2)
+// }
 
 
 
